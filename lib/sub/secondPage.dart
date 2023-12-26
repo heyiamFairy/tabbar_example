@@ -62,7 +62,7 @@ class _SecondApp extends State<SecondApp> {
                       value: flyExist,
                       onChanged: (bool? check) {
                         setState(() {
-                          flyExist = check;
+                          flyExist = check!;
                         });
                       })
                 ],
@@ -75,37 +75,37 @@ class _SecondApp extends State<SecondApp> {
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
                     GestureDetector(
-                      child: Image.asset('repoo/images/cow.png', width: 80),
+                      child: Image.asset('repo/images/cow.png', width: 80),
                       onTap: () {
                         _imagePath = 'repo/images/cow.png';
                       },
                     ),
                     GestureDetector(
-                      child: Image.asset('repoo/images/pig.png', width: 80),
+                      child: Image.asset('repo/images/pig.png', width: 80),
                       onTap: () {
                         _imagePath = 'repo/images/pig.png';
                       },
                     ),
                     GestureDetector(
-                      child: Image.asset('repoo/images/bee.png', width: 80),
+                      child: Image.asset('repo/images/bee.png', width: 80),
                       onTap: () {
                         _imagePath = 'repo/images/bee.png';
                       },
                     ),
                     GestureDetector(
-                      child: Image.asset('repoo/images/cat.png', width: 80),
+                      child: Image.asset('repo/images/cat.png', width: 80),
                       onTap: () {
                         _imagePath = 'repo/images/cat.png';
                       },
                     ),
                     GestureDetector(
-                      child: Image.asset('repoo/images/fox.png', width: 80),
+                      child: Image.asset('repo/images/fox.png', width: 80),
                       onTap: () {
                         _imagePath = 'repo/images/fox.png';
                       },
                     ),
                     GestureDetector(
-                      child: Image.asset('repoo/images/monkey.png', width: 80),
+                      child: Image.asset('repo/images/monkey.png', width: 80),
                       onTap: () {
                         _imagePath = 'repo/images/monkey.png';
                       },
@@ -124,8 +124,8 @@ class _SecondApp extends State<SecondApp> {
                     AlertDialog dialog = AlertDialog(
                       title: Text('동물 추가하기'),
                       content: Text(
-                        '이 동물은 ${animal.animalName}입니다'
-                        '또 이 동물의 종류는 ${animal.kind}입니다. \n이 동물을 추가하시겠습니까?',
+                        '이 동물은 ${animal.animalName} 입니다. '
+                        '또 이 동물의 종류는 ${animal.kind} 입니다. \n이 동물을 추가하시겠습니까?',
                         style: TextStyle(fontSize: 30),
                       ),
                       actions: [
