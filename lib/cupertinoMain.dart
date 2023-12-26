@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tabbar_example/iosSub/cupertinoFirstPage.dart';
 import 'animalItem.dart';
 
 class CupertinoMain extends StatefulWidget {
@@ -33,9 +34,9 @@ class _CupertinoMainState extends State<CupertinoMain> {
     animalList.add(Animal(
         animalName: "원숭이", kind: "영장류", imagePath: "repo/images/monkey.png"));
     animalList.add(
-        Animal(animalName: "돼지", kind: "곤충", imagePath: "repo/images/bee.png"));
-    animalList.add(
-        Animal(animalName: "늑대", kind: "곤충", imagePath: "repo/images/bee.png"));
+        Animal(animalName: "돼지", kind: "곤충", imagePath: "repo/images/pig.png"));
+    animalList.add(Animal(
+        animalName: "늑대", kind: "곤충", imagePath: "repo/images/wolf.png"));
   }
 
   @override
@@ -45,10 +46,8 @@ class _CupertinoMainState extends State<CupertinoMain> {
           tabBar: tabBar!,
           tabBuilder: (context, value) {
             if (value == 0) {
-              return Container(
-                child: Center(
-                  child: Text('cupertino tab 1'),
-                ),
+              return CupertinoFirstPage(
+                animalList: animalList,
               );
             } else {
               return Container(

@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class Animal {
   String? imagePath; //동물 이미지 경로
   String? animalName; //동물 이름
